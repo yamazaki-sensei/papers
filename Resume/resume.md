@@ -43,11 +43,22 @@
 - Android SDK
 
 ### その他
-- Git
+#### 十分に習熟
+- git
 - GitHub
 - GitHub Actions
 - Docker
 - terraform / terragrunt
+
+#### 利用可能
+- Looker
+- Supabase
+- Firebase
+- Google Cloud
+- Kubernetes
+- Sentry
+- Twilio
+- Auth0
 
 ---
 
