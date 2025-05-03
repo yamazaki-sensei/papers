@@ -1,0 +1,13 @@
+{
+  "name": "papers",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "md-to-pdf ./Rirekisyo/rirekisyo.md; md-to-pdf ./Resume/resume.md"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "md-to-pdf": "^5.2.4"
+  }
+}
