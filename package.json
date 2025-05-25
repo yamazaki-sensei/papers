@@ -2,7 +2,7 @@
   "name": "papers",
   "version": "1.0.0",
   "scripts": {
-    "build": "md-to-pdf ./Rirekisyo/rirekisyo.md; md-to-pdf ./Resume/resume.md"
+    "build": "sh ./build.sh"
   },
   "author": "",
   "license": "ISC",
