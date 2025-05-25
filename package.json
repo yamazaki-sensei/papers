@@ -2,11 +2,12 @@
   "name": "papers",
   "version": "1.0.0",
   "scripts": {
-    "build": "sh ./build.sh"
+    "build": "sh ./build.sh",
+    "test": "sh ./build.sh && echo '✅ ビルドテスト成功'"
   },
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "履歴書・職務経歴書のPDF生成システム",
   "dependencies": {
     "md-to-pdf": "^5.2.4"
   }
