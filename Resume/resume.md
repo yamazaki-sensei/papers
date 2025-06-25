@@ -148,11 +148,13 @@
 - サービス提供に必要な課題解決を一通り担当
 - インフラやBackendアプリケーション開発に関するリードは業務委託のプロフェッショナルの方にお願いし、自らは開発に集中
   - アプリケーション開発、リリース、パフォーマンス改善、バグ修正などを担当
-  - JsonSchemaによる静的なAPIスキーマ検証の導入 ([Railsのレスポンスの型をカジュアルに検証したい](https://zenn.dev/yamazaki_sensei/articles/2a66e92a06ba34))
+  - JsonSchemaによる静的なAPIスキーマ検証の導入
+    - そのときの内容をまとめたZenn: [Railsのレスポンスの型をカジュアルに検証したい](https://zenn.dev/yamazaki_sensei/articles/2a66e92a06ba34)
 - Frontendアプリケーション開発のリードを担当
   - アプリケーション開発、リリース、パフォーマンス改善、バグ修正などを担当
   - テックリードとしてアプリケーションの開発基盤を整備
     - 全体のアーキテクチャの検討
+    - BackendのJsonSchemaからTypeScriptの型を生成し、Frontendで活用
     - WebpackからViteへの移行
     - Jestの導入
     - JestからVitestへの移行
