@@ -19,12 +19,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "22"
           cache: "npm"
 
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Install Puppeteer dependencies
         run: |
           sudo apt-get update
@@ -41,12 +41,12 @@ jobs:
             libcups2 \
             libxss1 \
             libxrandr2 \
-            libasound2 \
+            libasound2t64 \
             libatk1.0-0 \
             libatk-bridge2.0-0 \
             libpangocairo-1.0-0 \
             libgtk-3-0
-      
+
       - name: Check build script execution
         env:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
@@ -58,21 +58,18 @@ jobs:
           sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.pub] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
-          
+
           # Chromeの場所を確認
           CHROME_PATH=$(which google-chrome-stable)
           echo "Chrome path: $CHROME_PATH"
           export PUPPETEER_EXECUTABLE_PATH=$CHROME_PATH
-          
+
           # GitHub ActionsのUbuntuではBSD版のsedではなくGNU版のsedが使われるため、-i ""の代わりに-iを使用する
           sed -i 's/sed -i "" /sed -i /g' build.sh
-          
-          # md-to-pdfにPuppeteer関連のフラグを追加
-          sed -i 's/npx md-to-pdf/npx md-to-pdf --puppeteer-args="--no-sandbox --disable-setuid-sandbox"/g' build.sh
-          
+
           # 実行権限を付与
           chmod +x build.sh
-          
+
           # スクリプトを実行
           ./build.sh
 
