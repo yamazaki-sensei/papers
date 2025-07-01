@@ -8,8 +8,8 @@
 
 - 勤務先：Lecto株式会社  
 - 直近の開発実績：債権回収効率化サービスの開発  
-  - Reactによるfrontend開発、開発リード  
-  - Ruby on Railsによるbackend開発  
+  - Reactによるfrontendアプリケーション開発、開発リード  
+  - Ruby on Railsによるbackendアプリケーション開発  
   - TerraformによるGoogle Cloudのインフラ管理  
   - CSチーム/デザイナーチームと連携した上でのサービスの仕様検討  
 
